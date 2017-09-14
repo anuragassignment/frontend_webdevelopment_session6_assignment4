@@ -1,0 +1,20 @@
+/* Form Styles */
+
+section h2 {
+  display: none;
+}
+
+section form {
+  margin: 20px 0 0 0;
+}
+
+p.bg-primary {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  margin: 20px 0 0 0;
+  display: none;
+}
+
+.bg-primary.display {
+  display: block;
+}

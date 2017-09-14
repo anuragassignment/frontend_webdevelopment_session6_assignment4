@@ -1,0 +1,19 @@
+<!-- app.components html template in which values from component and input values are two way binded-->
+<section class="container col-md-6 col-md-offset-3">
+  <h2>Registration form</h2>
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="inputText1">First Name</label>
+      <input type="text" class="form-control" #firstname id="inputText1" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="inputText2">Last Name</label>
+      <input type="text" class="form-control" #lastname id="inputText2" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+    </div>
+    <!-- form-group ends here -->
+    <button type="submit" class="btn btn-default" (click)="printDetails(firstname, lastname, $event)">Register</button>
+    <p class="bg-primary" [ngClass]=isVisible()>{{title}}</p>
+    <!-- property from app component class bound to title property of input component class -->
+    <app-input [title]="title"></app-input>
+  </form>
+</section>
